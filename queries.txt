@@ -78,7 +78,7 @@ Selezionare tutti i corsi di laurea magistrale
 
 SELECT * 
 FROM `degrees` 
-WHERE level ='triennale'
+WHERE level ='magistrale'
 
 -----------------------------------------------
 
@@ -99,6 +99,6 @@ Quanti sono gli insegnanti che non hanno un numero di telefono?
 ////////////////////////////////////////////
 
 
-SELECT * 
+SELECT COUNT(id) as `num` 
 FROM `teachers` 
 WHERE phone IS NULL
