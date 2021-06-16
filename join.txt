@@ -82,6 +82,14 @@ FROM `students`
 JOIN exam_student ON students.id= exam_student.student_id
 GROUP BY students.id
 
+2)
+SELECT students.surname,courses.id,COUNT(*)
+FROM exam_student
+JOIN exams ON exam_student.exam_id=exams.id
+JOIN courses ON exams.course_id=courses.id
+JOIN students ON exam_student.student_id=students.id
+GROUP BY exam_student.student_id,courses.id
+
 
 
 
